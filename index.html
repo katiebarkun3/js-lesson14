@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson16</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div></div>
+
+
+
+    <script>
+        let el = document.querySelector('div');
+
+        console.log(getComputedStyle(el).width); //string
+
+        console.log('ширина эл.: ' + el.offsetWidth); //number
+        console.log('высота эл.: ' + el.offsetHeight); //number
+
+        console.log('ширина эл. без рамки: ' + el.clientWidth); //number
+        console.log('высота эл. без рамки: ' + el.clientHeight); //number
+
+        console.log('ширина рамки эл.: ' + el.clientLeft); // right/top/bottom | number
+        
+        console.log(document.body.scrollHeight);
+
+        console.log(el.getBoundingClientRect().x);
+        console.log(el.getBoundingClientRect().y);
+        
+
+
+    </script>
+    
+</body>
+</html>
